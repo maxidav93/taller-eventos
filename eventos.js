@@ -2,10 +2,16 @@ function alerta() {
     console.log("Hola!");
 
 }
+const btn = document.querySelector('button');
 
-document.addEventListener("DOMContentLoaded", function() {
-    const div = document.getElementById('div');
-    div.addEventListener('click', function() {
-        console.log("Hola! Soy el div"); 
+    btn.addEventListener('click', (event) => { 
+        event.stopPropagation();
+        console.log("Hola!"); 
     });
-  });
+
+const div = document.querySelector('div');
+
+    div.addEventListener('click', () => 
+        
+        console.log("Hola! Soy el div")
+    );
